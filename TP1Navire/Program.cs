@@ -6,7 +6,15 @@ namespace TP1Navire
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TesterInstanciation();
+            Console.ReadKey
+        }
+        public static void TesterInstanciation()
+        {
+            //déclaration de l'objet unNavire de la classe Navire
+            TP1Navire unNavire;
+            //instanciation de l'objet
+            unNavire = new Navire()
         }
     }
 }
