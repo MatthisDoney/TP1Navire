@@ -12,9 +12,13 @@ namespace TP1Navire
         public static void TesterInstanciation()
         {
             //déclaration de l'objet unNavire de la classe Navire
-            TP1Navire unNavire;
+            Navire unNavire;
             //instanciation de l'objet
-            unNavire = new Navire()
+            unNavire = new Navire("IMO9427639", "Copper Spirit", "Hydrocarbures", 156827);
+            //Déclaration et instanciation d'un autre objet navire
+            Navire unAutreNavire = new Navire("IMO839272", "MSC Isabella", "Porte-conteneurs", 197500);
+            // ??
+            //unAutreNavire = new Navire("IMO8715871", "MSC PILAR");
         }
     }
 }
