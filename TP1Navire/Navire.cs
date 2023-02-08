@@ -11,13 +11,6 @@ namespace TP1Navire
         private string libelleFret;
         private int qteFretMaxi;
 
-        public Navire(string imo, string nom)
-        {
-            this.imo = imo;
-            this.nom = nom;
-            this.libelleFret = "indéfini";
-            this.qteFretMaxi = 0;
-        }
 
         public Navire(string imo, string nom, string libelleFret, int qteFretMaxi)
         {
@@ -25,7 +18,9 @@ namespace TP1Navire
             this.nom = nom;
             this.libelleFret = libelleFret;
             this.qteFretMaxi = qteFretMaxi;
+
         }
+        public Navire(string imo, string nom) :this(imo, nom, "indéfini", 0) { }
 
 
         public string Imo { get => imo; set => imo = value; }
