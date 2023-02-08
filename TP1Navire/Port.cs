@@ -23,9 +23,13 @@ namespace TP1Navire
         public int NbNaviresMax { get => nbNaviresMax; set => nbNaviresMax = value; }
         internal List<Navire> Navires { get => navires; set => navires = value; }
 
+        /// <summary>
+        /// Enregistre l'arrivée du navire en paramètre
+        /// </summary>
+        /// <param name="navire"></param>
         public void EnregistrerArrivee(Navire navire)
         {
-            if (Navires.Count() <= 5)
+            if (Navires.Count() <= nbNaviresMax)
             {
                 Navires.Add(navire);
             }
@@ -33,6 +37,11 @@ namespace TP1Navire
                 Console.WriteLine("Ajout Impossible le port est complet");
             }
         }
+        /// <summary>
+        /// Enregistre le départ du navire en paramètre
+        /// Seulement si il est présent dans le port
+        /// </summary>
+        /// <param name="imo"></param>
         public void EnregistrerDepart(String imo)
         {
             if (EstPresent(imo))
@@ -44,6 +53,11 @@ namespace TP1Navire
                 Console.WriteLine("Impossible : Le navire n'est pas dans le port");
             }
         }
+        /// <summary>
+        /// Verifie si le navire est présent dans le port
+        /// </summary>
+        /// <param name="imo"></param>
+        /// <returns></returns>
         public bool EstPresent(String imo)
         {
             return Navires.Exists(x => x.Imo == imo);
