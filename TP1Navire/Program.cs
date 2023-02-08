@@ -27,7 +27,7 @@ namespace TP1Navire
         }
         static void Affiche(Navire navire)
         {
-            
+
             Console.WriteLine($"Identification : {navire.Imo}\n Nom : {navire.Nom}\n Type de frêt : {navire.LibelleFret}\n Quantité de Frêt : {navire.QteFretMaxi}\n------------------------");
         }
     }

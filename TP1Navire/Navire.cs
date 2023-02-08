@@ -20,7 +20,7 @@ namespace TP1Navire
             this.qteFretMaxi = qteFretMaxi;
 
         }
-        public Navire(string imo, string nom) :this(imo, nom, "indéfini", 0) { }
+        public Navire(string imo, string nom) :this(imo, nom, "indéfini", 0) { } //A RETENIR
 
 
         public string Imo { get => imo; set => imo = value; }
